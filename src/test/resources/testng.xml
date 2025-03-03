@@ -1,0 +1,7 @@
+<suite name="Cucumber Test Suite" verbose="1">
+    <test name="Cucumber Tests">
+        <classes>
+            <class name="runner.TestRunner" />
+        </classes>
+    </test>
+</suite>
