@@ -56,11 +56,6 @@ public class SignupPage {
         element.clear();
         element.sendKeys(text);
     }
-
-    public String getErrorMessage() {
-            WebElement errorMessageElement = driver.findElement(By.className("error_message_class")); // Replace with actual class or locator
-            return errorMessageElement.getText();
-    }
 }
 
 

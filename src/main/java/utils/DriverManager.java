@@ -30,10 +30,6 @@ public class DriverManager {
         options.addArguments("--remote-allow-origins=*");
         return options;
     }
-    public static void resetDriver() {
-        quitDriver();
-        initializeDriver();
-    }
 
     public static void quitDriver() {
         if (driver.get() != null) {

@@ -1,70 +1,50 @@
-//package stepDefinitions;
-//
-//import io.cucumber.java.en.*;
-//import org.testng.Assert;
-//import pages.LoginPage;
-//import utils.DriverManager;
-//
-//public class LoginSteps {
-//    private final LoginPage loginPage = new LoginPage(DriverManager.getDriver());
-//
-//    @Given("I am on the login page")
-//    public void navigateToLoginPage() {
-//        DriverManager.getDriver().get("https://magento.softwaretestingboard.com/customer/account/login/");
-//    }
-//
-//    @Given("I have a registered user")
-//    public void createRegisteredUser() {
-//        // Leverage SignupSteps to register a user
-//        SignupSteps signupSteps = new SignupSteps();
-//        signupSteps.navigateToSignupPage();
-//        signupSteps.enterValidDetails();
-//        signupSteps.submitRegistrationForm();
-//        signupSteps.verifyAccountPage();
-//        signupSteps.logout();
-//    }
-//
-//    @When("I login with valid credentials")
-//    public void loginWithValidCredentials() {
-//        loginPage.login(SignupSteps.getGeneratedEmail(), "P@ssw0rd123!");
-//    }
-//
-//    @When("I login with email {string} and password {string}")
-//    public void loginWithEmailAndPassword(String email, String password) {
-//        loginPage.login(email, password);
-//    }
-//
-//    @Then("I should be logged in successfully")
-//    public void verifyLoginSuccess() {
-//        Assert.assertTrue(loginPage.isLoginSuccessful(), "Login was not successful!");
-//    }
-//
-//    @Then("I should see an error message {string}")
-//    public void verifyErrorMessage(String expectedError) {
-//        String actualError = loginPage.getErrorMessage();
-//        Assert.assertEquals(actualError, expectedError, "Displayed error message does not match the expected one!");
-//    }
-//
-//    @Given("I am logged in")
-//    public void performLogin() {
-//        navigateToLoginPage();
-//        loginWithValidCredentials();
-//        verifyLoginSuccess();
-//    }
-//
-//    @When("I close and reopen the browser")
-//    public void simulateBrowserRestart() {
-//        DriverManager.resetDriver();
-//        DriverManager.getDriver().get("https://magento.softwaretestingboard.com");
-//    }
-//
-//    @And("I navigate to the account page")
-//    public void navigateToAccountPage() {
-//        DriverManager.getDriver().get("https://magento.softwaretestingboard.com/customer/account/");
-//    }
-//
-//    @Then("I should still be logged in")
-//    public void verifySessionPersistence() {
-//        Assert.assertTrue(loginPage.isUserLoggedIn(), "Session persistence failed; user is not logged in!");
-//    }
-//}
+package stepDefinitions;
+
+import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import pages.LoginPage;
+import utils.DriverManager;
+import java.time.Duration;
+
+public class LoginSteps {
+    private final LoginPage loginPage = new LoginPage(DriverManager.getDriver());
+
+    @Given("I am on the login page")
+    public void navigateToLoginPage() {
+        DriverManager.getDriver().get("https://magento.softwaretestingboard.com/customer/account/login/");
+    }
+
+    @When("I enter registered email and password")
+    public void enterValidCredentials() {
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(15));
+
+
+        WebElement emailElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")));
+        WebElement passwordElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("pass")));
+        WebElement signInButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("send2")));
+        emailElement.sendKeys(SignupSteps.getGeneratedEmail());
+        passwordElement.sendKeys("P@ssw0rd123!");
+        signInButton.click();
+    }
+
+
+    @Then("I should be redirected to my account page after login")
+    public void verifySuccessfulLogin() {
+        Assert.assertTrue(loginPage.isLoginSuccessful(), "Login was not successful!");
+    }
+
+    @When("I enter incorrect login credentials")
+    public void enterIncorrectLoginDetails() {
+        loginPage.performLogin("invalidUser@example.com", "WrongPassword123");
+    }
+
+    @Then("I should see an error message {string}")
+    public void verifyErrorMessage(String expectedMessage) {
+        String actualMessage = loginPage.getErrorMessage();
+        Assert.assertEquals(actualMessage, expectedMessage, "Error message does not match!");
+    }
+}

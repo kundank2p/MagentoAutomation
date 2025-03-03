@@ -25,7 +25,7 @@ public class SignupSteps {
     }
 
 
-    @Then("I should be redirected to my account page")
+    @Then("I should see my account page")
     public void verifyAccountPage() {
         boolean signupSuccess = signupPage.isSignupSuccessful();
         Assert.assertTrue(signupSuccess, "Signup was not successful! Current URL: " + DriverManager.getDriver().getCurrentUrl());
