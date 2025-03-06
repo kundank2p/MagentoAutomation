@@ -1,4 +1,13 @@
-2025-03-06 15:26:32 INFO  Log:10 - Login Page initialized.
-2025-03-06 15:26:36 INFO  Log:10 - Login initialized.
-2025-03-06 15:26:36 INFO  Log:10 - Login Page initialized.
-2025-03-06 15:26:41 INFO  Log:10 - Login Successful.
+2025-03-06 17:36:16 INFO  Log:10 - Test started: runScenario
+2025-03-06 17:36:29 INFO  Log:10 - Test passed: runScenario
+2025-03-06 17:36:29 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
+2025-03-06 17:36:29 INFO  Log:10 - Test started: runScenario
+2025-03-06 17:36:29 INFO  Log:10 - Login Page initialized.
+2025-03-06 17:36:32 INFO  Log:10 - Login initialized.
+2025-03-06 17:36:33 INFO  Log:10 - Test passed: runScenario
+2025-03-06 17:36:33 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
+2025-03-06 17:36:33 INFO  Log:10 - Test started: runScenario
+2025-03-06 17:36:33 INFO  Log:10 - Login Page initialized.
+2025-03-06 17:36:37 INFO  Log:10 - Login Successful.
+2025-03-06 17:36:37 INFO  Log:10 - Test passed: runScenario
+2025-03-06 17:36:37 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
