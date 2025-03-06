@@ -21,8 +21,7 @@ public class ExtentTestNGListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
         // Create a test in the report
-        ExtentTest extentTest = ExtentReportManager.getInstance()
-                .createTest(result.getMethod().getMethodName());
+        ExtentTest extentTest = ExtentReportManager.getInstance().createTest(result.getMethod().getMethodName());
         test.set(extentTest);
     }
 

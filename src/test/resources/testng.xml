@@ -1,13 +1,13 @@
 <suite name="Cucumber Extent Report Suite" verbose="1">
     <!-- Add Extent Report Listener -->
     <listeners>
-        <listener class-name="listeners.ExtentTestNGListener" />
+        <listener class-name="listeners.ExtentTestNGListener"/>
     </listeners>
 
     <!-- Test for Cucumber Tests -->
     <test name="Cucumber Tests">
         <classes>
-            <class name="runner.TestRunner" />
+            <class name="runner.TestRunner"/>
         </classes>
     </test>
 </suite>

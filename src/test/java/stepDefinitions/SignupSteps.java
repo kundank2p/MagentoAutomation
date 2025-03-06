@@ -4,11 +4,13 @@ import io.cucumber.java.en.*;
 import org.testng.Assert;
 import pages.SignupPage;
 import utils.DriverManager;
+
 import java.util.Objects;
 
 public class SignupSteps {
     private final SignupPage signupPage = new SignupPage(DriverManager.getDriver());
     private static String generatedEmail;
+
     public static String getGeneratedEmail() {
         return generatedEmail;
     }

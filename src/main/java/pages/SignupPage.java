@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.Objects;
 
@@ -42,8 +43,7 @@ public class SignupPage {
 
     public boolean isSignupSuccessful() {
         try {
-            wait.until(ExpectedConditions.or(
-                    ExpectedConditions.urlContains("customer/account") // If redirected to login page
+            wait.until(ExpectedConditions.or(ExpectedConditions.urlContains("customer/account") // If redirected to login page
             ));
             return Objects.requireNonNull(driver.getCurrentUrl()).contains("customer/account");
         } catch (TimeoutException e) {

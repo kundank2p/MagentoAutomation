@@ -1,4 +1,5 @@
 Feature: User Signup
+
   @positive
   Scenario: Successful registration with valid details
     Given I am on the signup page
