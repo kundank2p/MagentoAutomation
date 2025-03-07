@@ -1,13 +1,19 @@
-2025-03-06 17:36:16 INFO  Log:10 - Test started: runScenario
-2025-03-06 17:36:29 INFO  Log:10 - Test passed: runScenario
-2025-03-06 17:36:29 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
-2025-03-06 17:36:29 INFO  Log:10 - Test started: runScenario
-2025-03-06 17:36:29 INFO  Log:10 - Login Page initialized.
-2025-03-06 17:36:32 INFO  Log:10 - Login initialized.
-2025-03-06 17:36:33 INFO  Log:10 - Test passed: runScenario
-2025-03-06 17:36:33 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
-2025-03-06 17:36:33 INFO  Log:10 - Test started: runScenario
-2025-03-06 17:36:33 INFO  Log:10 - Login Page initialized.
-2025-03-06 17:36:37 INFO  Log:10 - Login Successful.
-2025-03-06 17:36:37 INFO  Log:10 - Test passed: runScenario
-2025-03-06 17:36:37 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
+2025-03-07 12:17:52 WARN  TestNGContentHandler:133 - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [D:\Intellij-Projects\MagentoAutomation\testng.xml] otherwise TestNG may fail or not work as expected.
+2025-03-07 12:17:52 INFO  Utils:112 - [TestNG] Running:
+  D:\Intellij-Projects\MagentoAutomation\testng.xml
+
+2025-03-07 12:17:53 INFO  Log:10 - Test started: runScenario
+2025-03-07 12:17:53 INFO  WebDriverManager:1220 - Using chromedriver 133.0.6943.141 (resolved driver for Chrome 133)
+2025-03-07 12:17:53 INFO  WebDriverManager:1282 - Exporting webdriver.chrome.driver as C:\Users\Kundan Prasad\.cache\selenium\chromedriver\win64\133.0.6943.141\chromedriver.exe
+2025-03-07 12:18:05 INFO  Log:10 - Test passed: runScenario
+2025-03-07 12:18:05 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
+2025-03-07 12:18:05 INFO  Log:10 - Test started: runScenario
+2025-03-07 12:18:05 INFO  Log:10 - Login Page initialized.
+2025-03-07 12:18:09 INFO  Log:10 - Login initialized.
+2025-03-07 12:18:09 INFO  Log:10 - Test passed: runScenario
+2025-03-07 12:18:09 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
+2025-03-07 12:18:09 INFO  Log:10 - Test started: runScenario
+2025-03-07 12:18:09 INFO  Log:10 - Login Page initialized.
+2025-03-07 12:18:13 INFO  Log:10 - Login Successful.
+2025-03-07 12:18:13 INFO  Log:10 - Test passed: runScenario
+2025-03-07 12:18:13 INFO  Log:10 - Screenshot captured: D:\Intellij-Projects\MagentoAutomation/test-output/screenshots/runScenario_success.png
